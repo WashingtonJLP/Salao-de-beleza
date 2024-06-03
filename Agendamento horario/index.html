@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/main.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/main.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login/Cadastro</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <h1>Agende seu serviço</h1>
+
+  <form id="beard-form" class="service-form">
+    <h2>Barba e Rosto</h2>
+    <label for="beard-style">Escolha o estilo de barba:</label>
+    <select id="beard-style" name="beard-style">
+      <option value="barba-desenhada">Barba Desenhada</option>
+      <option value="barba-simples">Barba Simples</option>
+      <option value="bigode">Bigode</option>
+      <option value="cavanhaque">Cavanhaque</option>
+      <option value="sobrancelha">Sobrancelha</option>
+    </select>
+    <button type="button" onclick="submitForm('beard-form')">Agendar</button>
+  </form>
+  
+  <form id="hair-form" class="service-form">
+    <h2>Cabelo</h2>
+    <label for="hair-style">Escolha o estilo de cabelo:</label>
+    <select id="hair-style" name="hair-style">
+      <option value="corte-adulto">Corte Adulto</option>
+      <option value="corte-infantil">Corte Infantil</option>
+      <option value="luzes">Luzes</option>
+      <option value="platinado">Platinado</option>
+      <option value="raspar">Raspar</option>
+    </select>
+    <button type="button" onclick="submitForm('hair-form')">Agendar</button>
+  </form>
+  
+  <form id="hair-beard-form" class="service-form">
+    <h2>Cabelo + Barba</h2>
+    <label for="hair-beard-style">Escolha o estilo de corte e barba:</label>
+    <select id="hair-beard-style" name="hair-beard-style">
+      <option value="corte-e-barba">Corte e Barba</option>
+      <option value="barba-e-barba-simples">Cabelo e Barba Simples</option>
+      <option value="raspar-e-barba">Raspar e Barba</option>
+      <option value="raspar-e-barba-simples">Raspar e Barba Simples</option>
+    </select>
+    <button type="button" onclick="submitForm('hair-beard-form')">Agendar</button>
+  </form>
+  
+  <form id="combo-promo-form" class="service-form">
+    <h2>Combos e Promoções</h2>
+    <label for="combo-promo">Escolha o combo ou promoção:</label>
+    <select id="combo-promo" name="combo-promo">
+      <option value="corte-selagem-hidratacao">Corte + Selagem + Hidratação</option>
+      <option value="corte-barba-massagem">Corte + Barba + Massagem</option>
+    </select>
+    <button type="button" onclick="submitForm('combo-promo-form')">Agendar</button>
+  </form>
+
+  
+  <div id="calendar"></div>
+
+
+
+  <div id="container">
+    <label id="periodLabel" for="periodSelect">Escolha o Período:</label>
+    <select id="periodSelect">
+        <option value="morning">Manhã</option>
+        <option value="afternoon">Tarde</option>
+    </select>
+    <br>
+    <label id="timeLabel" for="timeSelect">Escolha o Horário:</label>
+    <select id="timeSelect"></select>
+    <br>
+    <button id="confirmBtn">Confirmar Agendamento</button>
+</div>
+  
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.0/locales/pt-br.js"></script>
+</body>
+
+</html>
