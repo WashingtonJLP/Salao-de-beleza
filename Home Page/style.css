@@ -20,3 +20,8 @@ html {
     width: auto; 
     margin: 0 auto; 
 }
+h3{
+  text-align: center;
+ width: 100%;
+ color: white !important;
+}
