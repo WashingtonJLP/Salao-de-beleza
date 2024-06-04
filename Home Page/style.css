@@ -15,6 +15,7 @@ html {
   }
   
   .custom-img {
-    height: 700px; 
-    object-fit: cover; 
-  }
+    max-height: 750px; 
+    width: auto; 
+    margin: 0 auto; 
+}
