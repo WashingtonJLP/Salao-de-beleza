@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Pagamento</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6A0DAD;">
+    <a class="navbar-brand" href="#">Salão de Beleza</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <h1 class="text-center">Detalhes do Pagamento</h1>
+    <form id="payment-form">
+      <div class="form-group">
+        <label for="payment-method">Método de Pagamento:</label>
+        <select class="form-control" id="payment-method" required onchange="showPaymentInfo()">
+          <option value="card">Cartão de Crédito</option>
+          <option value="pix">PIX</option>
+          <option value="cash">Dinheiro</option>
+        </select>
+      </div>
+      <div id="card-details" class="payment-details">
+        <div class="form-group">
+          <label for="card-number">Número do Cartão:</label>
+          <input type="text" class="form-control" id="card-number" placeholder="1234 5678 9012 3456" oninput="formatCardNumber(this)">
+        </div>
+        <div class="form-group">
+          <label for="expiry-date">Data de Expiração:</label>
+          <input type="text" class="form-control" id="expiry-date" placeholder="MM/AA" oninput="formatExpirationDate(this)">
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV:</label>
+          <input type="text" class="form-control" id="cvv" placeholder="123">
+        </div>
+      </div>
+      <div id="pix-info" class="payment-info" style="display: none;">
+        <div class="form-group">
+          <label for="cpf">CPF:</label>
+          <input type="text" class="form-control" id="cpf" placeholder="123.456.789-01" oninput="formatCPF(this)">
+        </div>
+      </div>
+      <div id="cash-info" class="payment-info" style="display: none;">
+        <p>O pagamento será realizado no local.</p>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Confirmar</button>
+    </form>
+    <div id="message" class="mt-3 text-center"></div>
+  </div>
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  
+  <script src="script.js"></script>
+  <script>
+    function formatCardNumber(input) {
+      let value = input.value;
+
+      
+      value = value.replace(/\D/g, '');
+
+      
+      value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+
+      
+      input.value = value;
+    }
+
+    function formatExpirationDate(input) {
+      let value = input.value;
+
+      
+      value = value.replace(/\D/g, '');
+
+     
+      if (value.length > 2) {
+        value = value.replace(/^(\d{2})/, '$1/');
+      }
+
+     
+      input.value = value;
+    }
+
+    function formatCPF(input) {
+      let value = input.value;
+
+      
+      value = value.replace(/\D/g, '');
+
+      
+      value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+
+      
+      input.value = value;
+    }
+
+    function showPaymentInfo() {
+      let paymentMethod = document.getElementById("payment-method").value;
+      let cardDetails = document.getElementById("card-details");
+      let pixInfo = document.getElementById("pix-info");
+      let cashInfo = document.getElementById("cash-info");
+
+      if (paymentMethod === "pix") {
+        cardDetails.style.display = "none";
+        pixInfo.style.display = "block";
+        cashInfo.style.display = "none";
+      } else if (paymentMethod === "cash") {
+        cardDetails.style.display = "none";
+        pixInfo.style.display = "none";
+        cashInfo.style.display = "block";
+      } else {
+        cardDetails.style.display = "block";
+        pixInfo.style.display = "none";
+        cashInfo.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
