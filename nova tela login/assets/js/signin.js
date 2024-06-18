@@ -55,7 +55,7 @@ function entrar() {
   });
   
   if (usuario.value == userValid.user && senha.value == userValid.senha) {
-    window.location.href = '/assets/html/pagAdmin.html'; // Direcionando para outra página
+    window.location.href = 'Salao-de-beleza/nova tela login/assets/html/pagAdmin.html'; // Direcionando para outra página
     
     let mathRandom = Math.random().toString(16).substr(2);
     let token = mathRandom + mathRandom;
