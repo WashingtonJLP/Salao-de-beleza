@@ -1,0 +1,104 @@
+[
+    {
+      "id": 1,
+      "tipo": "Navalha",
+      "codigo": 110,
+      "quantidade": 0
+    },
+    {
+      "id": 2,
+      "tipo": "Água oxigenada volume 30",
+      "codigo": 111,
+      "quantidade": 0
+    },
+    {
+      "id": 3,
+      "tipo": "Água oxigenada volume 40",
+      "codigo": 112,
+      "quantidade": 0
+    },
+    {
+      "id": 4,
+      "tipo": "Condicionador",
+      "codigo": 113,
+      "quantidade": 0
+    },
+    {
+      "id": 5,
+      "tipo": "Shampoo",
+      "codigo": 114,
+      "quantidade": 0
+    },
+    {
+      "id": 6,
+      "tipo": "Tinta Preto p/ cabelo",
+      "codigo": 115,
+      "quantidade": 0
+    },
+    {
+      "id": 7,
+      "tipo": "Tinta Azul p/ cabelo",
+      "codigo": 116,
+      "quantidade": 0
+    },
+    {
+      "id": 8,
+      "tipo": "Tinta Rosa p/ cabelo",
+      "codigo": 115,
+      "quantidade": 0
+    },
+    {
+      "id": 9,
+      "tipo": "Pó descolorante",
+      "codigo": 116,
+      "quantidade": 0
+    },
+    {
+      "id": 10,
+      "tipo": "Gel fixador",
+      "codigo": 117,
+      "quantidade": 0
+    },
+    {
+      "id": 11,
+      "tipo": "Creme de pentear",
+      "codigo": 118,
+      "quantidade": 0
+    },
+    {
+      "id": 12,
+      "tipo": "Gola higienica",
+      "codigo": 119,
+      "quantidade": 0
+    },
+    {
+      "id": 13,
+      "tipo": "Capa de proteção",
+      "codigo": 120,
+      "quantidade": 0
+    },
+    {
+      "id": 14,
+      "tipo": "Pentes",
+      "codigo": 121,
+      "quantidade": 0
+    },
+    {
+      "id": 15,
+      "tipo": "Maquinas de corte",
+      "codigo": 121,
+      "quantidade": 4
+    },
+    {
+      "id": 16,
+      "tipo": "Tesouras",
+      "codigo": 122,
+      "quantidade": 8
+    },
+    {
+      "id": 17,
+      "tipo": "Maquinas de acabamento",
+      "codigo": 123,
+      "quantidade": 4
+    }
+  ]

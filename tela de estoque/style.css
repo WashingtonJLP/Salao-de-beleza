@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.barramenu {
+    background-color: #5627a3 !important;
+    height: 60px;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 1.5rem;
+}
+
+.header {
+    margin-top: 20px;
+}
+
+.voltarPag {
+    background-color: #b70808;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 45px;
+    cursor: pointer;
+}
+
+.voltarPag:hover {
+    background-color: #a00606;
+}
+
+.caixacolorida {
+    background-color: #5627a3;
+    color: white;
+    border-radius: 15px;
+}
+
+.linha {
+    border-top: 1px solid #f6f3f3;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.cancelar {
+    background-color: #cacacb;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cancelar:hover {
+    background-color: #979797;
+}
+
+.gravar {
+    background-color: #3f31ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.gravar:hover {
+    background-color: #5e4dfc;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .voltarPag {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .caixacolorida {
+        padding: 20px;
+    }
+}
+.botoesFinais {
+    text-align: right;
+    margin-top: 10px; 
+}
+.botaoprancheta{
+    margin: 5px;
+    border-radius: 4px;
+    background-color: #5314d1cb;
+    color: white;
+}
