@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Login do administrador bem-sucedido
         $_SESSION['email'] = $email;
         $_SESSION['role'] = 'admin';
-        header("Location: admin.php"); // Redirecionar para página de administrador
+        header("Location: ../tela de estoque/tela de controle.html"); // Redirecionar para página de administrador
         exit();
     }
 
